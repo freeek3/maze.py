@@ -307,6 +307,17 @@ def main():
         )
     return 0
 
+def main_default():
+	run(
+		max_framerate=50,
+        all_symbols=[ARCHIVE.get(syms) for syms in ['THIN']],
+        color_set=COLOR_SETS + ['random'],
+        min_pipes=10,
+        max_pipes=50
+	)
+	return 0
 
 if __name__ == '__main__':
-    exit(main())
+    exit(main_default())
+
+	
